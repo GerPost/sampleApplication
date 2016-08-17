@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xsd:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	targetNamespace="http://sample.gp.nl/sampleApplication/sampleProjectHelloWorld/helloWorldBPELProcess"
+        xmlns:tns="http://sample.gp.nl/sampleApplication/sampleProjectHelloWorld/helloWorldBPELProcess"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        version="1.0">
+
+	<xsd:element name="process"	        type="tns:processRequestType"/>
+	<xsd:element name="processResponse"	type="tns:processResponseType"/>
+	
+	<xsd:complexType name="processRequestType">
+		<xsd:sequence>
+			<xsd:element	name="hello"           type="xsd:string" default="World"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="processResponseType">
+		<xsd:sequence>
+			<xsd:element	name="responseMessage" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>
